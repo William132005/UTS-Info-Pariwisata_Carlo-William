@@ -42,14 +42,13 @@ public class WisataAdapter extends RecyclerView.Adapter<WisataAdapter.ViewHolder
         holder.namaText.setText(wisata.getNama());
         holder.lokasiText.setText(wisata.getLokasi());
         holder.gambarView.setImageResource(wisata.getGambarResId());
+        holder.txtRating.setText(String.valueOf(wisata.getRating()));
         holder.btnFavorite.setImageResource(
                 wisata.isFavorite() ? R.drawable.ic_favorite_filled : R.drawable.ic_favorite_border
         );
-
         holder.btnFavorite.setOnClickListener(v -> {
             boolean newStatus = !wisata.isFavorite();
             wisata.setFavorite(newStatus);
-
             notifyItemChanged(holder.getAdapterPosition());
 
             if (newStatus) {
@@ -59,8 +58,10 @@ public class WisataAdapter extends RecyclerView.Adapter<WisataAdapter.ViewHolder
             }
         });
 
+        // ... (Logika itemView setOnClickListener biarkan saja)
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, DetailActivity.class);
+
             intent.putExtra("nama", wisata.getNama());
             intent.putExtra("lokasi", wisata.getLokasi());
             intent.putExtra("deskripsi", wisata.getDeskripsi());
@@ -75,22 +76,27 @@ public class WisataAdapter extends RecyclerView.Adapter<WisataAdapter.ViewHolder
 
     @Override
     public int getItemCount() {
-        return wisataList.size(); // Selalu gunakan list yang akan ditampilkan
+        return wisataList.size();
     }
 
+    // ============ MODIFIKASI VIEW HOLDER DI SINI ============
     public static class ViewHolder extends RecyclerView.ViewHolder {
         ImageView gambarView, btnFavorite;
         TextView namaText, lokasiText;
+        TextView txtRating; // <-- 2. TAMBAHKAN BARIS INI (Deklarasi)
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             gambarView = itemView.findViewById(R.id.imgWisata);
             namaText = itemView.findViewById(R.id.txtNamaWisata);
             lokasiText = itemView.findViewById(R.id.txtLokasiWisata);
-            btnFavorite = itemView.findViewById(R.id.btnFavorite); // Sesuai layout Anda
+            btnFavorite = itemView.findViewById(R.id.btnFavorite);
+            txtRating = itemView.findViewById(R.id.txtRating); // <-- 3. TAMBAHKAN BARIS INI (Inisialisasi)
         }
     }
+    // ====================================================
 
+    // ... (Filter pencarian biarkan saja)
     @Override
     public Filter getFilter() {
         return wisataFilter;

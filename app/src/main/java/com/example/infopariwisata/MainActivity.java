@@ -27,110 +27,92 @@ public class MainActivity extends AppCompatActivity {
 
         wisataList = new ArrayList<>();
 
-
         wisataList.add(new Wisata(
-                "Candi Borobudur",
-                "Magelang, Jawa Tengah",
-                "Candi Borobudur adalah candi Buddha terbesar di dunia dan salah satu keajaiban dunia yang dibangun pada abad ke-8.",
+                "Candi Borobudur", "Magelang, Jawa Tengah",
+                "Candi Borobudur adalah candi Buddha terbesar di dunia...",
                 R.drawable.borobudur,
-                "09:00 - 17:00 WIB",
-                "(0293) 788266",
-                "Lokal: Rp 50.000"
+                "09:00 - 17:00 WIB", "(0293) 788266", "Lokal: Rp 50.000",
+                4.8 // Rating
         ));
 
         wisataList.add(new Wisata(
-                "Gunung Bromo",
-                "Probolinggo, Jawa Timur",
-                "Gunung Bromo terkenal dengan pemandangan matahari terbit yang spektakuler dan lautan pasir yang luas.",
+                "Gunung Bromo", "Probolinggo, Jawa Timur",
+                "Gunung Bromo terkenal dengan pemandangan matahari terbit...",
                 R.drawable.bromo,
-                "24 Jam (Kawasan)",
-                "(0335) 541011",
-                "Lokal: Mulai Rp 29.000"
+                "24 Jam (Kawasan)", "(0335) 541011", "Lokal: Mulai Rp 29.000",
+                4.8 // Rating
         ));
 
         wisataList.add(new Wisata(
-                "Tanah Lot",
-                "Tabanan, Bali",
-                "Tanah Lot adalah pura yang terletak di atas batu besar di tepi laut, menjadi ikon wisata utama di Bali.",
+                "Tanah Lot", "Tabanan, Bali",
+                "Tanah Lot adalah pura yang terletak di atas batu besar...",
                 R.drawable.tanahlot,
-                "07:00 - 19:00 WITA",
-                "(0361) 880361",
-                "Lokal: Rp 20.000"
+                "07:00 - 19:00 WITA", "(0361) 880361", "Lokal: Rp 20.000",
+                4.6 // Rating
         ));
 
         wisataList.add(new Wisata(
-                "Raja Ampat",
-                "Papua Barat Daya",
-                "Raja Ampat terkenal sebagai surga bawah laut dunia dengan keindahan terumbu karang dan biota laut yang sangat kaya.",
+                "Raja Ampat", "Papua Barat Daya",
+                "Raja Ampat terkenal sebagai surga bawah laut dunia...",
                 R.drawable.rajaampat,
-                "24 Jam (Kawasan)",
-                "N/A",
-                "PIN/Tarif Jasa: Rp 500.000"
+                "24 Jam (Kawasan)", "N/A", "PIN/Tarif Jasa: Rp 500.000",
+                4.8 // Rating
         ));
 
         wisataList.add(new Wisata(
-                "Labuan Bajo",
-                "Nusa Tenggara Timur",
-                "Labuan Bajo merupakan pintu gerbang menuju Pulau Komodo, dengan pemandangan laut dan sunset yang memukau.",
+                "Labuan Bajo", "Nusa Tenggara Timur",
+                "Labuan Bajo merupakan pintu gerbang menuju Pulau Komodo...",
                 R.drawable.labuanbajo,
-                "24 Jam (Kawasan)",
-                "N/A",
-                "Tergantung Pulau"
+                "24 Jam (Kawasan)", "N/A", "Tergantung Pulau",
+                4.6 // Rating
         ));
 
         wisataList.add(new Wisata(
-                "Danau Toba",
-                "Sumatera Utara",
-                "Danau Toba adalah danau vulkanik terbesar di dunia, dikelilingi pemandangan pegunungan dan Pulau Samosir di tengahnya.",
+                "Danau Toba", "Sumatera Utara",
+                "Danau Toba adalah danau vulkanik terbesar di dunia...",
                 R.drawable.danautoba,
-                "24 Jam (Kawasan)",
-                "N/A",
-                "Gratis (Kawasan)"
+                "24 Jam (Kawasan)", "N/A", "Gratis (Kawasan)",
+                4.7 // Rating
         ));
 
         wisataList.add(new Wisata(
-                "Pulau Komodo",
-                "Nusa Tenggara Timur",
-                "Pulau Komodo adalah habitat asli hewan purba Komodo, sekaligus salah satu situs warisan dunia UNESCO.",
+                "Pulau Komodo", "Nusa Tenggara Timur",
+                "Pulau Komodo adalah habitat asli hewan purba Komodo...",
                 R.drawable.pulaukomodo,
-                "07:00 - 17:00 WITA",
-                "(0385) 41004",
-                "Lokal: Mulai Rp 150.000"
+                "07:00 - 17:00 WITA", "(0385) 41004", "Lokal: Mulai Rp 150.000",
+                4.7 // Rating
         ));
 
         wisataList.add(new Wisata(
-                "Tana Toraja",
-                "Sulawesi Selatan",
-                "Tana Toraja terkenal dengan kebudayaan unik, rumah adat Tongkonan, dan upacara adat pemakaman Rambu Solo.",
+                "Tana Toraja", "Sulawesi Selatan",
+                "Tana Toraja terkenal dengan kebudayaan unik...",
                 R.drawable.tanatoraja,
-                "08:00 - 17:00 WITA",
-                "N/A",
-                "Tergantung Lokasi"
+                "08:00 - 17:00 WITA", "N/A", "Tergantung Lokasi",
+                4.6 // Rating
         ));
 
         wisataList.add(new Wisata(
-                "Ubud",
-                "Gianyar, Bali",
-                "Ubud adalah pusat seni dan budaya Bali dengan suasana alam sawah, galeri seni, dan yoga retreat yang terkenal.",
+                "Ubud", "Gianyar, Bali",
+                "Ubud adalah pusat seni dan budaya Bali...",
                 R.drawable.ubud,
-                "24 Jam (Kawasan)",
-                "N/A",
-                "Gratis (Kawasan)"
+                "24 Jam (Kawasan)", "N/A", "Gratis (Kawasan)",
+                4.5 // Rating
         ));
 
         wisataList.add(new Wisata(
-                "Pulau Lombok",
-                "Nusa Tenggara Barat",
-                "Pulau Lombok memiliki pantai-pantai indah, Gunung Rinjani, dan budaya Sasak yang khas.",
+                "Pulau Lombok", "Nusa Tenggara Barat",
+                "Pulau Lombok memiliki pantai-pantai indah...",
                 R.drawable.lombok,
-                "24 Jam (Kawasan)",
-                "N/A",
-                "Gratis (Kawasan)"
+                "24 Jam (Kawasan)", "N/A", "Gratis (Kawasan)",
+                4.5 // Rating
         ));
+
+        // --------------------------------------------------
 
         adapter = new WisataAdapter(this, wisataList);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
+
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
