@@ -58,7 +58,6 @@ public class WisataAdapter extends RecyclerView.Adapter<WisataAdapter.ViewHolder
             }
         });
 
-        // ... (Logika itemView setOnClickListener biarkan saja)
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, DetailActivity.class);
 
@@ -79,11 +78,10 @@ public class WisataAdapter extends RecyclerView.Adapter<WisataAdapter.ViewHolder
         return wisataList.size();
     }
 
-    // ============ MODIFIKASI VIEW HOLDER DI SINI ============
     public static class ViewHolder extends RecyclerView.ViewHolder {
         ImageView gambarView, btnFavorite;
         TextView namaText, lokasiText;
-        TextView txtRating; // <-- 2. TAMBAHKAN BARIS INI (Deklarasi)
+        TextView txtRating;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -91,12 +89,10 @@ public class WisataAdapter extends RecyclerView.Adapter<WisataAdapter.ViewHolder
             namaText = itemView.findViewById(R.id.txtNamaWisata);
             lokasiText = itemView.findViewById(R.id.txtLokasiWisata);
             btnFavorite = itemView.findViewById(R.id.btnFavorite);
-            txtRating = itemView.findViewById(R.id.txtRating); // <-- 3. TAMBAHKAN BARIS INI (Inisialisasi)
+            txtRating = itemView.findViewById(R.id.txtRating);
         }
     }
-    // ====================================================
 
-    // ... (Filter pencarian biarkan saja)
     @Override
     public Filter getFilter() {
         return wisataFilter;

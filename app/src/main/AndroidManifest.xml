@@ -13,7 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InfoPariwisata">
 
-        <!-- Hanya MainActivity yang jadi launcher utama -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -23,7 +22,6 @@
             </intent-filter>
         </activity>
 
-        <!-- Activity detail untuk halaman informasi wisata -->
         <activity
             android:name=".DetailActivity"
             android:exported="false" />
